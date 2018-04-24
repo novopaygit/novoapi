@@ -1,0 +1,177 @@
+@charset "utf-8";
+@font-face {
+font-family:'NotoL';
+font-weight: normal;
+font-style: normal;
+src: url('font/NotoSansKR-Regular.eot');
+src: url('font/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+     url('font/NotoSansKR-Regular.woff2') format('woff2'),
+     url('font/NotoSansKR-Regular.woff') format('woff'),
+     url('font/NotoSansKR-Regular.otf') format('opentype'),
+	 local("※");
+}
+@font-face {
+font-family:'NotoB';
+font-weight: normal;
+font-style: normal;
+src: url('font/NotoSansKR-Medium.eot');
+src: url('font/NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'),
+     url('font/NotoSansKR-Medium.woff2') format('woff2'),
+     url('font/NotoSansKR-Medium.woff') format('woff'),
+     url('font/NotoSansKR-Medium.otf') format('opentype'),
+	 local("※");
+}
+
+@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;}
+body{line-height:1;font-family:'NotoL', 'nanumgothic', 'Montserrat', 'dotum', '돋움', sans-serif;}
+
+.floL{float:left !important;}.floR{float:right !important;}
+.text-R{text-align:right !important;}
+.pdl-5{padding-left:5px !important;}
+.w10{width:10% !important;}.w15{width:15% !important;}.w20{width:20% !important;}.w25{width:25% !important;}.w30{width:30% !important;}.w40{width:40% !important;}.w50{width:50% !important;}.w55{width:55% !important;}
+.w60{width:60% !important;}.w70{width:70% !important;}.w100{width:100% !important;}
+.fl-left{display:inline-block;width:100%;padding:0;margin:0;}
+.fl-left li{float:left;display:block;}
+.fl-none{display:inline-block;width:100%;padding:0;margin:0;}
+.fl-none li{float:none;display:block;}
+.font-eng{font-family:'Montserrat', 'NotoL','nanumgothic', 'dotum', '돋움', sans-serif !important;}
+
+.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;height:100%;width:100%;z-index:1040;background-color:#555;opacity:0.5;}
+.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;outline:0;display:block;overflow-y:scroll;transition:all 10s ease-out !important;}
+.modal-dialog{max-width:450px;margin:100px auto;position:relative;width:auto;}
+
+.modal-content{position:relative;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0, 0, 0, 0.2);border-radius:0.3rem;outline:0;transition: opacity 0.2s ease-out !important;transform:translate3d(0, 0, 0);margin:0 auto;}
+.modal-content{position:relative;background-color:#fff;background-clip:padding-box; border:1px solid rgba(0, 0, 0, 0.2);border-radius:0.3rem;outline:0;}
+.modal-content{box-shadow:0 2px 32px 0 rgba(0, 0, 0, 0.85);z-index:999999;border-radius:0;}
+
+.top-header{background-color:#204c9f;color:#fff;overflow:auto;}
+.top-header .header{width:100%;height:50px;}
+.top-header .header .header-icon{float:left;font-weight:normal;font-size:20px;text-transform:uppercase;line-height:50px;padding-left:10px;}
+.header-icon .font-eng{font-weight:600;letter-spacing:1px;}
+.top-header .header .close-icon{float:right;padding:5px 10px;border:1px solid #5777b5;cursor:pointer;margin:10px 10px 0 0;background:#031a47;}
+.top-header .header .close-icon:hover{border:1px solid #fff;}
+.top-header .header:after{clear:both;}
+.top-header .timer-row{clear:both;padding:5px 20px;background:#0f3378;height:20px;}
+.top-header .timer-row .timer-message{float:left;width:70%;font-size:13px;color:#69c1db;}
+.top-header .timer-row .timer-clock{text-align:center;float:right;font-size:13px;font-weight:bold;color:#feb326;}
+.top-header:after{clear:both;}
+.timer-row .timer-text{font-size:12px;}
+
+.order-details{background:#f5f8fb;padding:10px;font-size:13px;line-height:1.5;color:#555;}
+.tab-tit{ }
+.tab-tit > span{width:50%;display:inline-block;float:left;text-align:center;height:30px;line-height:30px;}
+.tab-tit > span.on{background-color:#aaa;color:#fff;}
+.tab-tit:after{clear:both;}
+
+.tab-cont-box{clear:both;}
+.tab-cont-box .login-image-box{background:#fff;margin-bottom:20px;text-align:center;padding-top:20px;}
+
+.payment-box {}
+.payment-box {}
+.payment-box .qrcode{float:left;}
+.payment-box .addr_info{float:left;}
+.payment-box .addr_info .refresh{text-align: right;margin-top: 20px; margin-right: 20px; cursor: pointer;}
+.payment-box .addr_info .addr_title {margin-top: 100px;}
+.payment-box .addr_info .address {}
+.payment-box .button {clear: both; text-align: center; }
+.payment-box .button button {width: 50%; margin-bottom: 20px;}
+
+.login-box .title{text-align:center;font-size:30px;text-transform:uppercase;height:40px;line-height:40px;font-weight:600;}
+.login-box input{height:30px;border:1px solid #ccc;padding:0 10px;width:50%;}
+.login-box .user_id,.login-box .user_pw,.login-box .user_otp{text-align:center;margin:10px;}
+.login-box .button{text-align:center;}
+
+::-webkit-input-placeholder{color:#9fa3a6 !important;opacity:1.0;}
+:-moz-placeholder{color:#9fa3a6 !important;opacity:1.0;}
+::-moz-placeholder{color:#9fa3a6 !important;opacity:1.0;}
+:-ms-input-placeholder{color:#9fa3a6 !important;opacity:1.0;}
+
+button{-moz-appearance:none;-webkit-appearance:none;-ms-appearance:none;appearance:none;-moz-transition:background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+-webkit-transition:background-color 0.2s ease-in-out, color 0.2s ease-in-out;-ms-transition:background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+transition:background-color 0.2s ease-in-out, color 0.2s ease-in-out;cursor:pointer;display:inline-block;text-decoration:none;text-transform:uppercase;white-space:nowrap;
+border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;padding:7px 10px;font-size:13px;text-align:center;border:1px solid #d1dfec;color:#555;background:#fff;}
+.bg-red{background-color:#e64d4f;border:1px solid #f06633;color:#fff !important;}
+.bg-red:hover{background:#be3d3f;color:#fff;border:1px solid #d3501f;}
+.bg-blue{background-color:#6f93d8;border:1px solid #6f93d8;color:#fff !important;}
+.bg-blue:hover{background:#4a6fb8;color:#fff;border:1px solid #4a6fb8;}
+.bg-yellow{background-color:#feb326;border:1px solid #feb326;color:#fff !important;}
+.bg-yellow:hover{background-color:#e99800;border:1px solid #e99800;}
+.btn-login{padding:10px 20px !important;font-size:14px !important;font-family:'Montserrat', 'nanumgothic', 'dotum', '돋움', sans-serif;font-weight:600;}
+
+#login-before .before-bottom, #login-after .after-bottom{position:relative;margin:20px 0 10px 0;border-top:1px solid #d1dfec;display:inline-block;width:100%;padding-top:10px;}
+#login-before .before-timer, #login-after .after-bottom .after-timer{margin-left:10px;}
+#login-before .before-timer .timer-clock{}
+#login-before .before-bottom p,#login-after .after-bottom p{font-size:10px;font-size:12px;color:#111;line-height:30px;margin-right:10px;}
+
+#login-after{padding:0px;position:relative;}
+#login-after table.pay{margin:0 auto;font-size:14px;color:#555;border-bottom:1px solid #d1dfec;width:100%;padding-bottom:10px;}
+#login-after table.pay th{text-align:right;padding-right:20px;}
+#login-after table.pay td{text-align:left;}
+#login-after .user_nm{text-align:center;height:30px;line-height:30px;}
+#login-after .payable_coin{text-align:center;height:30px;line-height:30px;}
+#login-after .pay_otp{text-align:center;height:30px;line-height: 0px;}
+#login-after .button{padding-top:20px;}
+
+.test-zone{border-top:solid 1px #d1dfec;padding:10px;background-color:#d1dfec;overflow:hidden;}
+.timer-clock{position:relative;background:#fff;color:#777;border:1px solid #d1dfec;border-radius:3px;padding:5px 20px;font-size:14px;text-align:center;}
+
+.payment-wrap{position:relative;padding:30px 20px 20px 20px;}
+.payment-wrap .payment-send{border:1px solid #204ca1;padding:10px 20px 10px 10px;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;background:#fff;}
+.payment-wrap .payment-send ul{display:inline-block;width:100%;list-style:none;padding:0;margin:0 auto;height:50px;}
+.payment-wrap .payment-send ul li{float:left;display:block;}
+.payment-wrap .payment-send h4{font-size:15px;font-weight:normal;color:#333;margin:0;padding-left:10px;line-height:50px;}
+.payment-wrap .payment-send h3{font-family:'Montserrat', 'NotoL', 'dotum', '돋움', sans-serif;text-align:right;font-size:20px;font-weight:normal;color:#222;margin:0;padding:0;line-height:50px;margin-right:5px;}
+.payment-wrap .payment-send h3 span{font-weight:normal;font-size:20px;}
+.payment-wrap .payment-send .send-logo{float:right;display:table;height:50px;margin:3px 5px 0 0;}
+.send-logo span{display:table-cell;vertical-align:middle;}
+.send-logo span img{width:80px;height:auto;}
+
+.customerpay-wrap{position:relative;padding:20px;margin:0 20px;border-radius:20px;background:#204ca1;}
+.customerpay-wrap .customerpay-title{text-align:left;margin-bottom:10px;}
+.customerpay-wrap .customerpay-title h5{font-size:15px;font-weight:normal;color:#fff;margin:0 0 5px 0;}
+.customerpay-wrap .customerpay-title span{text-align:left;color:rgba(255, 255, 255, 0.7);font-size:14px;}
+em{font-style:normal;color:rgba(255, 255, 255, 0.7);}
+.customerpay-wrap .pay-bigtext{font-family:'Montserrat','dotum','돋움',sans-serif;text-align:right;font-size:30px;font-weight:600;color:#feb326;margin:0;padding:0;}
+.customerpay-wrap .pay-bigtext span{font-weight:normal;font-size:30px;padding-left:10px;font-weight:600;}
+.customerpay-wrap p{font-size:13px;color:#fff;}
+.customerpay-wrap ul{border-bottom:2px dotted rgba(255, 255, 255, 0.5);margin-bottom:10px;}
+
+.otpcode-wrap{position:relative;padding:20px;margin:20px 20px;border-radius:20px;background:#efefef;}
+.otpcode-wrap h5{color:#333;font-size:16px;font-weight:normal;line-height:30px;}
+.otpcode-wrap .pay_otp{width:230px;}
+.otpcode-wrap .pay_otp input{border:1px solid #aaa;width:100%;padding:0 10px;display:block;}
+
+.confirmpay-wrap{position:relative;margin:20px;padding:20px;border:1px solid #d1dfec;background:#f5f8fb;}
+.confirmpay-wrap .confirm-box{text-align:center;background:#fff;}
+.confirmpay-wrap .confirm-box ul{width:410px;margin:20px auto;text-align:center;}
+.confirmpay-wrap .confirm-box ul li{display:block;}
+.confirmpay-wrap .confirm-box h4{width:100px;font-size:15px;font-weight:600;color:#555;line-height:35px;}
+.confirmpay-wrap .confirm-box .sms-input{width:200px;margin-right:10px;}5
+.sms-input input{width:190px;height:25px;padding:5px 0 5px 10px;border:1px solid #aaa;background:#fff;color:#555;font-size:14px;}
+.confirm-box .confirm-button{position:relative;}
+.confirm-box .confirm-button button{width:100px;height:37px;display:block;margin:0;text-align:center;font-size:14px;font-weight:600;}
+
+.bottom-agree{position:relative;font-size:14px;color:#777;border-bottom:1px solid #ddd;}
+.bottom-agree fieldset{clear:both;padding:10px 0;}
+.bottom-agree fieldset legend{color:#333;font-size:15px;font-weight:600;width:100px;float:left;line-height:25px;}
+.bottom-agree fieldset label{display:table;float:left;margin-left:20px;cursor:pointer;height:20px;}
+.bottom-agree fieldset label:first-child{margin-left:0px;}
+.bottom-agree fieldset label span{display:table-cell;vertical-align:middle;}
+.bottom-agree input[type="checkbox"]{width:20px;height:20px;margin-right:5px;padding:0;}
+
+.bottom-agree .agree-check-box{position:relative;width:90%;margin:0 auto;display:block;}
+.bottom-agree .agree-check-box li{width:50%;}
+.use-pop-btn{height:25px;background:#acacac;color:#fff;font-size:12px;text-align:center;margin-left:5px;line-height:25px;padding:0 5px;border:none;border-radius:2px;display:inline-block;}
+.use-pop-btn:hover{background:#999;}
+
+.bottom-button{position:relative;margin-top:20px;}
+.bottom-button button{padding:10px 20px;display:block;margin:0 auto;text-align:center;font-size:15px;font-weight:600;background:#204ca1;color:#fff;}
+.bottom-button button:hover{background:#031a47;color:#fff;}
+.bottom-text{background:#eee;padding:10px 0;}
+.bottom-text p{font-family:'Montserrat', 'dotum', '돋움', sans-serif;font-size:12px;color:#555;text-align:right;display:block;padding-right:20px;}
+
+
