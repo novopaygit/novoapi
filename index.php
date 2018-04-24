@@ -43,7 +43,7 @@
 				    <h2><a href="/index.php"><img src="/images/top-logo.png" alt="novopay" title="NOVOPAY"></a></h2>
 					 <h3 class="tt-eng"><strong>API Server</strong></h3>
 					 <p class="login-text">
-					     NOVOPAY API서버입니다.
+					     NOVOPAY API 서버입니다.
 					 </p>
 					 
 				
