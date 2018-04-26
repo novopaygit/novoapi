@@ -154,7 +154,7 @@ class SVC_CoinExch extends SVC {
 			return $this->addError('파라메타값이 유효하지않습니다.');
 		}
 		if ($this->coinExch->getSuccessCode() != $act['status']  ) {		
-			return $this->addError($act('status').' - '. $act('msg'));
+			return $this->addError($act['status'].' - '. $act['msg']);
 		}
 		return $act['data'];
 	}
