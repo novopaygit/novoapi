@@ -66,6 +66,9 @@ if ($unit_price == 0 or !$unit_price)return errorINV($currency. " 의 현재시�
 
 $currency_info = $svcCoin->getCurrencyInfo($currency);
 $coin_pay = round(floatval($price / $unit_price), 4); // 코인결제금액
+if ($coin_pay == 1) {
+	$coin_pay = 1.0;
+}
 $coin_fee = $currency_info['fee']; //출금수수료
 $coin_tot = $coin_pay + $coin_fee;
 // --------------------------------------------------------- 임시주문정보 데이터
