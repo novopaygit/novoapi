@@ -53,14 +53,14 @@ class OkBitClient {
 
 		if ($data_key) {
 			$ret_data = $this->data[$data_key];
-			if ($ret_data['res_data']['code'] != 'SUCCESS') return false;
+			if ($ret_data['res_data']['code'] != '0000') return false;
 			$ret_data['res_data']['code'] = '0000';
 			$data = $ret_data['res_data']['data'];
 			$json = json_decode($this->decrypt($data), true);
 			$this->data[$data_key]['res_data']['data'] = $json;
 			$this->data[$data_key]['res_body'] = json_encode($this->data[$data_key]['res_data']);
 		} else {
-			if ($this->res_data['code'] != 'SUCCESS') return false;
+			if ($this->res_data['code'] != '0000') return false;
 			$this->res_data['code'] = '0000';
 			$data = $this->res_data['data'];
 			$json = json_decode($this->decrypt($data), true);
