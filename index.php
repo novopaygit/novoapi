@@ -1,5 +1,9 @@
 ﻿
-	<!DOCTYPE HTML>
+<?php
+header('Content-Type: text/html');
+?>
+
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>[NOVOPAY API]</title>

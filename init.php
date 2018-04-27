@@ -1,4 +1,7 @@
 <?php
+
+header("Content-Type: text/html; charset=UTF-8");
+
 if (!defined('_INIT_')) define('_INIT_', true); else return;
 
 

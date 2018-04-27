@@ -257,6 +257,7 @@ function errorINV($msg, $add='') {
 <html>
 
 <head>
+
 <link type="text/css" rel="stylesheet" href="/css/invoice.css?dummy=<?=time()?>">
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript">
