@@ -310,7 +310,7 @@ function errorINV($msg, $add='') {
 										<li class="w25"><h4>송금가능금액</h4></li>
 										<li class="w50"><h3 id="payable_coin"><?=$payable_coin?> <span><?=$currency?></span></h3></li>
 										<li class="w25">
-											<div class="send-logo"><span><img src="/images/logo-bitcoin.png" alt="bitcoin" title="bitcoin"></span></div>
+											<div class="send-logo"><span><img src="/images/logo-<?=$currency?>.png" alt="bitcoin" title="bitcoin"></span></div>
 										</li>
 									</ul>
 								</div>
