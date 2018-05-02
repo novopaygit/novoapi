@@ -1,7 +1,4 @@
 ﻿
-<?php
-header('Content-Type: text/html');
-?>
 
 <!DOCTYPE HTML>
 <html>
