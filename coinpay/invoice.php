@@ -276,7 +276,7 @@ function errorINV($msg, $add='') {
 		<div class="modal-content">
 			<div class="top-header">
 				<div class="header">
-					<div class="header-icon"><span class="font-eng" id ="btn_auto_login" >NovoPay</span> 상품결제</div>
+					<div class="header-icon"><span class="font-eng" id ="btn_auto_login" >NovoPay2</span> 상품결제</div>
 					<div class="close-icon"><img src="/images/close-icon.svg"></div>
 				</div>				
 			</div>
