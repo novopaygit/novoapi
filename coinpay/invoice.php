@@ -259,7 +259,8 @@ function errorINV($msg, $add='') {
 <head>
 
 <link type="text/css" rel="stylesheet" href="/css/invoice.css?dummy=<?=time()?>">
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+<script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript">
 <!--
 	var varReceiveURL = '<?=$receive_url?>';
