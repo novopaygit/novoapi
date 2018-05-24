@@ -60,6 +60,9 @@ $(document).ready(function() {
 		
 
 		if (!window.confirm('결제를 진행하시겠습니까?')) return false;
+
+		//$('#paymenproc').show();
+
 		var req_data = $frmPay.serialize();
 		$.ajax({
 			type: 'POST',
@@ -76,10 +79,13 @@ $(document).ready(function() {
 					return;
 				}
 				callbackPayment(res);
+				//$('#paymenproc').hide();
 			},
 			complete : function(jqXHR, textStatus) {
+				//$('#paymenproc').hide();
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
+				//$('#paymenproc').hide();
 			}
 		});
 		return false;
@@ -152,6 +158,7 @@ $(document).ready(function() {
 		$('#payable_coin').text(res.payable_coin +' '+ res.currency);
 		$('#login-before').hide();
 		$('#login-after').show();
+
 	}
 	$('button[type="submit"]', $frmLogin).click(function() {
 		$('input[name="is_test"]', $frmLogin).val('N');

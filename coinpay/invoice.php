@@ -280,13 +280,12 @@ function errorINV($msg, $add='') {
 					<div class="header-icon"><span class="font-eng" id ="btn_auto_login" >NovoPay</span> 상품결제</div>
 					<div class="close-icon"><img src="/images/close-icon.svg"></div>
 				</div>				
-			</div>
-
+			</div>			
 			<div class="tab-cont-box">
 				<div class="tab-cont">
 					<div class="login-box">
 						<div id="login-before"<?php if ($is_login) echo ' style="display: none;";' ?>>
-				            <div class="login-image-box"><img src="/images/login-image.png"></div>
+				            <div class="login-image-box"><img src="/images/login-image.png"></div>				            
 							<form name="frmLogin" method="post">
 								<input type="hidden" name="currency" value="<?=$currency?>" />
 								<input type="hidden" name="is_test" />
@@ -356,7 +355,7 @@ function errorINV($msg, $add='') {
 
 									</fieldset>
 								</div><!-- /bottom-agree -->
-								
+								<div id="paymenproc" style="display:none;" ><img src="/images/payment_proc.png" height="100" width="100"></div>
 								<div class="bottom-button"><button type="submit" class="bg-blue-02">송금하기</button></div>
 
 								<div class="after-bottom">
@@ -368,6 +367,7 @@ function errorINV($msg, $add='') {
 					</div>
 				</div>		
 			</div>
+
 			<div style="float: left; display:none;">
 				<form name="frmReceive" method="post" action="<?=$receive_url?>">
 					<input type="hidden" name="novopay_result_cd" value="0000" />
