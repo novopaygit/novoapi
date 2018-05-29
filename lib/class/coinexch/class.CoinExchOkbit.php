@@ -419,8 +419,8 @@ class CoinExchOkbit extends CoinExchBase{
 			'msg'		=> 'success',
 			'data'		=> array(
 				'email' =>  $list['email'], //이메일주소
-				'level' =>  $list['level'], //사용자레벨 
-				'role'  =>  $list['role'],   //권한 
+				//'level' =>  $list['level'], //사용자레벨 
+				//'role'  =>  $list['role'],   //권한 
 				'name'  =>  $list['name'],   //사용자이름 					
 			)
 		);

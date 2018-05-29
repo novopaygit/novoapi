@@ -57,12 +57,17 @@ if ($data['status'] !='0000'){
 
 $exch_token = $data['data']['access_token'];
 
+
+
 // --------------------------------------------------------- user info
+
 $data = $svcCoin->getUserInfo($exch_token);
+
 if (!$data) return ajaxFail($svcCoin->getLastError());
 $pay_user_id = $data['email'];
 $pay_user_nm = $data['name'];
 if ($pay_user_nm == '') $pay_user_nm = 'BLANK';
+
 
 
 
