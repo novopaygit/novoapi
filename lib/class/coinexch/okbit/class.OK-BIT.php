@@ -290,6 +290,17 @@ class OkBitClient {
 		return $this->execute();
 	}
 	// ========================================================================================= Public
+	
+	// -----------------------------------------------------------------------------
+	public function shop_login($email, $passwd) {
+		$this->initAction('/public/signIn');
+		$this->init_post(array(
+				'email'    => $email,				
+				'password' => $passwd
+			));
+		return $this->execute();
+	}
+
 	// -----------------------------------------------------------------------------
 	public function public_client($data) {
 		$this->initAction('/public/client');
