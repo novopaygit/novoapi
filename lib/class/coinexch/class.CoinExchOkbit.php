@@ -36,7 +36,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}			
@@ -79,7 +79,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}
@@ -136,7 +136,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}	
@@ -194,7 +194,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}
@@ -269,7 +269,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}			
@@ -332,7 +332,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}	
@@ -398,7 +398,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}			
@@ -466,7 +466,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}			
@@ -553,7 +553,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}			
@@ -622,7 +622,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}			
@@ -688,7 +688,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}
@@ -757,7 +757,7 @@ class CoinExchOkbit extends CoinExchBase{
 
 			return array(
 				'status' => $rescode, //'9002',
-				'msg' => $resmsg, //'Connectiong Error',
+				'msg' => $resmsg.$this->getOKBITErrorMsgKR($rescode),
 				'data' => null
 			);
 		}	
@@ -805,6 +805,49 @@ class CoinExchOkbit extends CoinExchBase{
 			default : return false;
 		}
 	}
+
+	private function getOKBITErrorMsgKR($rescode) {
+		$rescode = strtolower($rescode);
+		switch ($rescode) {
+			case '1000' : return '(실패입니다.)';
+			case '1001'	: return '(알수없는 오류입니다.)';
+			case '1002'	: return '(잘못된 요청입니다.)';
+			case '1003'	: return '(상수값이 없습니다.)';
+			case '4001'	: return '(사용자가 없습니다.)';
+			case '4002'	: return '(사용자 필수 설정값이 없습니다.)';
+			case '4003'	: return '(사용할 수 없는 키 입니다.)';
+			case '4004'	: return '(가용한 코인이 0보다 적습니다.)';
+			case '4005'	: return '(지갑이 존재하지 않습니다.)';
+			case '4006'	: return '(지갑이 이미 있습니다.)';
+			case '4007'	: return '(사용할 수 없는 주문타입 입니다.)';
+			case '4008'	: return '(잔액이 부족함니다.)';
+			case '4009'	: return '(사용할 수 없는 인증코드 입니다.)';
+			case '4010'	: return '(사용할 수 없는 이메일 입니다.)';
+			case '4011'	: return '(주문 취소 실패 입니다.)';
+			case '4012'	: return '(사용할 수 없는 주문타입 입니다.)';
+			case '4013'	: return '(주문이 존재하지 않습니다.)';
+			case '4014'	: return '(진행중인 주문서가 없습니다.)';
+			case '4015'	: return '(최소 수량보다 적습니다.)';
+			case '4016'	: return '(지원되지 않습니다.)';
+			case '4017'	: return '(사용자가 현재 블록되어 있습니다.)';
+			case '4018'	: return '(관리자 지갑의 잔액이 0보다 적습니다.)';
+			case '4019'	: return '(지갑의 잠금 해제 실패입니다.)';
+			case '4020'	: return '(내부 송금 지갑은 허용되지 않습니다.)';
+			case '4021'	: return '(최소 수량보다 적습니다.)';
+			case '4022'	: return '(사용자가 보유중인 지갑이 아님니다.)';
+			case '4023'	: return '(출금 목록에 없습니다.)';
+			case '4024'	: return '(원화 입금 요청만 가능합니다.)';
+			case '4025'	: return '(원화 출금 요청만 가능합니다.)';
+			case '4026'	: return '(잘못된 패스워드 입니다.)';
+			case '4027'	: return '(이미 완료된 건 입니다.)';
+			case '4028'	: return '(이미 전송된 건 입니다.)';
+			case '4029'	: return '(진행중인 출금건이 없습니다.)';
+			case '4041'	: return '(OTP 코드가 유효하지 않습니다.)';			
+			case '5003'	: return '(잘못된 클라이언트 요청입니다.)';
+			default : return ' ';
+		}
+	}
+
 
 	function setMode($mode) {
 		parent::setMode($mode);

@@ -45,10 +45,12 @@ if ($data['status'] !='0000'){
 	$res_code = $data['status'];
 	$res_msg = $data['msg'];
 
-	switch ($res_code) {
-		case '4041' : $msg = 'OPT 코드가 유효하지 않습니다.'; break;
+	$msg = '로그인에 실패하였습니다.'. PHP_EOL. $res_code .' - '. $res_msg;
+
+	/*switch ($res_code) {
+		case '4041' : $msg = 'OTP 코드가 유효하지 않습니다.'; break;
 		default : $msg = '로그인에 실패하였습니다.'. PHP_EOL. $res_code .' - '. $res_msg; break;
-	}	
+	}	*/
 	return ajaxFail($msg);
 }
 

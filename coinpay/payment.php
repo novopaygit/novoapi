@@ -53,11 +53,12 @@ if (!$withdraw_data) {
 if ($withdraw_data['status'] !='0000'){
 	$res_code = $withdraw_data['status'];
 	$res_msg = $withdraw_data['msg'];
-
-	switch ($res_code) {
-		case '4041' : $msg = 'OPT 코드가 유효하지 않습니다.'; break;
+	$msg = '출금요청에 실패하였습니다.'. PHP_EOL. $res_code .' - '. $res_msg;
+	
+	/*switch ($res_code) {
+		case '4041' : $msg = 'OTP 코드가 유효하지 않습니다.'; break;
 		default : $msg = '출금요청에 실패하였습니다.'. PHP_EOL. $res_code .' - '. $res_msg; break;
-	}
+	}*/
 	//session_destroy();
 	return ajaxFail($msg);
 }

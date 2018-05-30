@@ -43,14 +43,14 @@ if ($token_info['expire_dt'] < date('Y-m-d H:i:s')) return errorINV('만료된 �
 $mall_id = $token_info['mall_id'];
 
 // ===================================================================== Receive URL 이 등록된값인지 확인 
-$mallCfg = getMallConfig($mall_id); //쇼핑몰의 ReceiveUrl config 화일에서 가져와서 등록된 값인지 비교한다.
+/*$mallCfg = getMallConfig($mall_id); //쇼핑몰의 ReceiveUrl config 화일에서 가져와서 등록된 값인지 비교한다.
 if ($mallCfg['RECEIVE_URL'] != $receive_url_base){
 	//return errorINV('NovoPay에 등록되지않은 ReceiveUrl 입니다. 관리자에게 문의하세요');
 	echo "<script>alert(\"등록되지않은 ReceiveURl입니다.확인되지 않은 URL은 보안상 결체처리를 진행 할수없습니다. 관리자에게 문의하세요\");</script>";
 	exit;
 }
 
-
+*/
 
 // ===================================================================== 결제정보 확인
 // ---------------------------------------------------------
