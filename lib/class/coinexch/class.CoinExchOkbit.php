@@ -833,7 +833,7 @@ class CoinExchOkbit extends CoinExchBase{
 			case '4018'	: return '(관리자 지갑의 잔액이 0보다 적습니다.)';
 			case '4019'	: return '(지갑의 잠금 해제 실패입니다.)';
 			case '4020'	: return '(내부 송금 지갑은 허용되지 않습니다.)';
-			case '4021'	: return '(최소 수량보다 적습니다.)';
+			case '4021'	: return '(최소출금액 보다 적습니다.)';
 			case '4022'	: return '(사용자가 보유중인 지갑이 아님니다.)';
 			case '4023'	: return '(출금 목록에 없습니다.)';
 			case '4024'	: return '(원화 입금 요청만 가능합니다.)';

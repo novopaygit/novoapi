@@ -190,10 +190,27 @@ if ($is_login) {
 	//if ($pay_temp_info['currency'] == $currency) {
 	//} else {
 
-		$deposit_data = $svcCoin->getDepositInfo($exch_token, $currency, $coin_pay, $price, true);
-		if (!$deposit_data) return errorINV('입금주소 요청 오류가 발생하였습니다.');
+
+		$deposit_result = $svcCoin->getDepositInfo($exch_token, $currency, $coin_pay, $price, true);
+
+		if (!$deposit_result) return ajaxFail('입금주소 요청에 실패 하였습니다.');
+
+		if ($deposit_result['status'] !='0000'){
+			$res_code = $deposit_result['status'];
+			$res_msg = $deposit_result['msg'];
+			$msg = '입금주소 요청에 실패 하였습니다.'. PHP_EOL. $res_code .' - '. $res_msg;
+
+			return ajaxFail($msg);
+		}
+		$deposit_data = $deposit_result['data'];
 		$payment_data['exch_req_id']     = $deposit_data['reqid'];
 		$payment_data['coin_addr']       = $deposit_data['address'];
+
+
+		/*$deposit_data = $svcCoin->getDepositInfo($exch_token, $currency, $coin_pay, $price, true);
+		if (!$deposit_data) return errorINV('입금주소 요청 오류가 발생하였습니다.');
+		$payment_data['exch_req_id']     = $deposit_data['reqid'];
+		$payment_data['coin_addr']       = $deposit_data['address'];*/
 
 	//}
 	//로직상 단에서 임시결제 정보가없으면 INsert 하는 로직을 타게된다면 다시조회해서 

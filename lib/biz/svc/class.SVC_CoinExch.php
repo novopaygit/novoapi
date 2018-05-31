@@ -66,7 +66,7 @@ class SVC_CoinExch extends SVC {
 		$params['price']        = $price;
 		$params['autosell']     = $auto_sell;
 
-		$responseData = $this->actionExchangeSearch($this->coinExch->getDepositAddress($params));
+		$responseData = $this->actionExchangeProc($this->coinExch->getDepositAddress($params));
 		if (!$responseData) return false;    
 		return $responseData;
 

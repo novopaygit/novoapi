@@ -84,8 +84,27 @@ foreach ($databal as $row) {
 }
 
 // ===================================================================== 입금주소
+/*
 $deposit_data = $svcCoin->getDepositInfo($exch_token, $currency, $pay_temp_info['coin_pay'], $pay_temp_info['price'], true);
-if (!$deposit_data) return ajaxFail('입금주소 요청 오류가 발생하였습니다.');
+if (!$deposit_data) {
+	$svcErrmsg = $svcCoin->getLastError();
+	return ajaxFail($svcErrmsg);
+	//return ajaxFail('입금주소 요청 오류가 발생하였습니다.');
+}*/
+$deposit_result = $svcCoin->getDepositInfo($exch_token, $currency, $pay_temp_info['coin_pay'], $pay_temp_info['price'], true);
+
+if (!$deposit_result) return ajaxFail('입금주소 요청에 실패 하였습니다.');
+
+if ($deposit_result['status'] !='0000'){
+	$res_code = $deposit_result['status'];
+	$res_msg = $deposit_result['msg'];
+
+	$msg = '입금주소 요청에 실패 하였습니다.'. PHP_EOL. $res_code .' - '. $res_msg;
+
+	return ajaxFail($msg);
+}
+
+$deposit_data = $deposit_result['data'];
 
 
 // ===================================================================== 임시결제정보 저장
