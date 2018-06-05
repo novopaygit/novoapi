@@ -157,7 +157,7 @@ if ($is_login) {
 
 	
 	$data = $svcCoin->getUserBalance($exch_token, $currency);
-	if (!$data) return errorINV('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다.');
+	if (!$data) return errorINV('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다. 오케이비트(거래소)사이트에 접속하여 잔액을 확인하세요.');
 	$payable_coin = '';
 	foreach ($data as $row) {
 		if ($row['currency'] != $currency) continue;
@@ -166,7 +166,7 @@ if ($is_login) {
 	}
 
 	//$payable_coin = 5.55;
-	if ($payable_coin == '') return errorINV('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다.!');
+	if ($payable_coin == '') return errorINV('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다! 오케이비트(거래소)사이트에 접속하여 잔액을 확인하세요.');
 
 	$mallinfo = getMallConfig($mall_id);
 	$payment_data = array(
