@@ -75,13 +75,15 @@ if ($pay_user_nm == '') $pay_user_nm = 'BLANK';
 
 // --------------------------------------------------------- balance
 $databal = $svcCoin->getUserBalance($exch_token, $currency);
-if (!$databal) return ajaxFail($svcCoin->getLastError());
+if (!$databal)  return ajaxFail('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다.');// return ajaxFail($svcCoin->getLastError());
 $payable_coin = '';
 foreach ($databal as $row) {
 	if ($row['currency'] != $currency) continue;
 	$payable_coin = $row['available_amt'];
 	break;
 }
+
+if ( $payable_coin == '') return ajaxFail('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다.');
 
 // ===================================================================== 입금주소
 /*

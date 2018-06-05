@@ -343,7 +343,14 @@ class CoinExchOkbit extends CoinExchBase{
 		if (!is_array($list)) return $result;
 		foreach ($list as $row) {
 			
+			if (isnull($row['currency'])) {
+				return array(
+				'status' => '9004',
+				'msg' => 'NotExistWallet!!',
+				'data' => null
+			);
 
+			}
 			$result[] = array(
 					'currency'   => $row['currency'],
 					'using_amt'        => $row['using'],

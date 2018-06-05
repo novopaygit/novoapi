@@ -151,9 +151,13 @@ if ($is_login) {
 		return errorINV('거래소 통신 토큰정보가 없습니다.', 'document.location.reload()');
 	}
 
+
+// --------------------------------------------------------- balance
+
+
 	
 	$data = $svcCoin->getUserBalance($exch_token, $currency);
-	if (!$data) return errorINV('결제가능 코인 조회 중 오류가 발생하였습니다.');
+	if (!$data) return errorINV('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다.');
 	$payable_coin = '';
 	foreach ($data as $row) {
 		if ($row['currency'] != $currency) continue;
@@ -162,7 +166,7 @@ if ($is_login) {
 	}
 
 	//$payable_coin = 5.55;
-	if ($payable_coin == '') return errorINV('결제가능 코인 정보가 없습니다.');
+	if ($payable_coin == '') return errorINV('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다.');
 
 	$mallinfo = getMallConfig($mall_id);
 	$payment_data = array(
