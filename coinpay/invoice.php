@@ -166,7 +166,7 @@ if ($is_login) {
 	}
 
 	//$payable_coin = 5.55;
-	if ($payable_coin == '') return errorINV('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다.');
+	if ($payable_coin == '') return errorINV('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다.!');
 
 	$mallinfo = getMallConfig($mall_id);
 	$payment_data = array(

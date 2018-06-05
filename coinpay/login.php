@@ -83,7 +83,7 @@ foreach ($databal as $row) {
 	break;
 }
 
-if ( $payable_coin == '') return ajaxFail('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다.');
+if ( $payable_coin == '') return ajaxFail('해당 코인의 지갑이 존재하지 않거나 잔액이 없습니다!.');
 
 // ===================================================================== 입금주소
 /*
