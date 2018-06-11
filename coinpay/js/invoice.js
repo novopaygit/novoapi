@@ -163,12 +163,10 @@ $(document).ready(function() {
 	$('button[type="submit"]', $frmLogin).click(function() {
 		$('input[name="is_test"]', $frmLogin).val('N');
 	});
-	$('#btn_auto_login').click(function() {
+	/*$('#btn_auto_login').click(function() {
 		$('input[name="is_test"]', $frmLogin).val('Y');
-		//$user_id.val($(this).attr('user_id'));
-		//$user_pw.val($(this).attr('user_pw'));
 		$frmLogin.trigger('submit');
-	});
+	});*/
 	$('#btn_auto_logout').click(function() {
 		$('input[name="is_test"]', $frmLogin).val('O');
 		//$user_id.val($(this).attr('user_id'));
