@@ -1,7 +1,7 @@
 <?php
 if (!defined('__CFG_ENV_CONFIG')) define('__CFG_ENV_CONFIG', true); else return;
 define('_DB_CHARSET_', 'utf-8');
-define('_SITE_TITLE_', 'NOVOPAY');
+define('_SITE_TITLE_', 'NOVOPAY API');
 define('_USE_ERROR_HANDLER_', True);
 /*
 define('_USE_MOBILE_', true);

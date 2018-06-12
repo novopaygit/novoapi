@@ -1,9 +1,11 @@
-﻿
+﻿<?php 
+	include "init.php";
+?>
 
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>[NOVOPAY API]</title>
+		<title>[<?php echo _SITE_TITLE_; ?>]</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]>
