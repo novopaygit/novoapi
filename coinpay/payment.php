@@ -75,16 +75,14 @@ $otpCode  = $pay_otp;
 		
 		$arrayRes = (array) json_decode($response);
 
-		$msg = $arrayRes["resstatus"].'결제금액에 대한 정보가 변경되어 결제처리할수 없습니다. 다시 금액 확인후 주문해주세요';
-		return ajaxFail($msg);
-		/*
+		
 		
 	
-		if ($arrayRes["resstatus"] !== "0000") {
+		if ($arrayRes["resstatus"] != "0000") {
 			
 			$msg = '결제금액에 대한 정보가 변경되어 결제처리할수 없습니다. 다시 금액 확인후 주문해주세요';
 			return ajaxFail($msg);
-		}*/
+		}
 
 	} else {
 		$msg = '결제처리에 실패하였습니다.(결제확인용 URL정보가 존재하지않습니다!)';
