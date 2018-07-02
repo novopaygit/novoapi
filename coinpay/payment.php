@@ -55,10 +55,6 @@ $otpCode  = $pay_otp;
         $endpoint =$_SESSION['receive_check_url'];
         
 
-        $msg = $post_data["order_id"].':디버그:'.$post_data["price"];
-		return ajaxFail($msg);
-        
-
     	$resultchk_curl = curl_init();
 		curl_setopt($resultchk_curl, CURLOPT_URL, $endpoint);						
 		curl_setopt($resultchk_curl, CURLOPT_RETURNTRANSFER,true);
