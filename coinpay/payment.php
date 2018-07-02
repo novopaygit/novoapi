@@ -56,7 +56,7 @@ $otpCode  = $pay_otp;
 
 
         $endpoint =$_SESSION['receive_check_url'];
-
+        /*
     	$resultchk_curl = curl_init();
 		curl_setopt($resultchk_curl, CURLOPT_URL, $endpoint);						
 		curl_setopt($resultchk_curl, CURLOPT_RETURNTRANSFER,true);
@@ -77,7 +77,7 @@ $otpCode  = $pay_otp;
 			
 			$msg = '결제금액에 대한 정보가 변경되어 결제처리할수 없습니다. 다시 금액 확인후 주문해주세요';
 			return ajaxFail($msg);
-		}
+		}*/
 	}else{
 		$msg = '결제처리에 실패하였습니다.(CheckUrl Not Exists!)';
 		return ajaxFail($msg);
