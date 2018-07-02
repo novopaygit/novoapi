@@ -45,17 +45,18 @@ $otpCode  = $pay_otp;
 //결제금액이이상없는지  receive_check_url 로 확인
 //2018.7.1 최인석
 // $_SESSION['receive_check_url'] invoice 에서 세션으로 url 저장 
-// curl로 호출하여결과 값 확인 
-	
+// curl로 호출하여결과 값 확인 	
 	
 	if (isset($_SESSION['receive_check_url'])){
 
-		$post_data["order_id"] = "0000";
-		$post_data["price"] = "12000";
-
+		$post_data["order_id"] = $payment_info['order_id'];
+		$post_data["price"] = $payment_info['price'];
 
         $endpoint =$_SESSION['receive_check_url'];
         
+
+        $msg = $post_data["order_id"].':디버그:'.$post_data["price"];
+		return ajaxFail($msg);
         
 
     	$resultchk_curl = curl_init();
