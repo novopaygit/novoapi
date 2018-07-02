@@ -31,7 +31,7 @@ if ($buyer_name  == '') return errorINV('구매자명이 필요합니다.');
 if ($buyer_id  == '')   return errorINV('구매자아이디가 필요합니다.');
 if ($token       == '') return errorINV('결제 토큰값이 필요합니다');
 if ($receive_url == '') return errorINV('결과전송 URL이 필요합니다.');
-if ($receive_url == '') return errorINV('결과체크전송 URL이 필요합니다.');
+if ($receive_check_url == '') return errorINV('결과체크전송 URL이 필요합니다.');
 
 $receive_url = $receive_url_base;
 $receive_check_url = $receive_check_url_base;
