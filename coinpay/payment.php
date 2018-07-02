@@ -54,9 +54,12 @@ $otpCode  = $pay_otp;
 		$post_data["price"] = "12000";
 
 
-        $endpoint =$_SESSION['receive_check_url'];*/
+        $endpoint =$_SESSION['receive_check_url'];
         
-    	$resultchk_curl = curl_init();
+        $msg = '결제금액에 대한 정보가 변경되어 결제처리할수 없습니다. 다시 금액 확인후 주문해주세요';
+		return ajaxFail($msg);
+
+    	/*$resultchk_curl = curl_init();
 		curl_setopt($resultchk_curl, CURLOPT_URL, $endpoint);						
 		curl_setopt($resultchk_curl, CURLOPT_RETURNTRANSFER,true);
 		if (strpos($endpoint,"https") !== false ){
@@ -68,7 +71,7 @@ $otpCode  = $pay_otp;
 		curl_setopt($resultchk_curl, CURLOPT_POSTFIELDS, $post_data);
 		$response = curl_exec($resultchk_curl);
 		curl_close($resultchk_curl);
-		var_dump($response);
+		//var_dump($response);
 
 		$arrayRes = (array) json_decode($response);
 	
@@ -76,7 +79,7 @@ $otpCode  = $pay_otp;
 			
 			$msg = '결제금액에 대한 정보가 변경되어 결제처리할수 없습니다. 다시 금액 확인후 주문해주세요';
 			return ajaxFail($msg);
-		}
+		}*/
 
 	} else {
 		$msg = '결제처리에 실패하였습니다.(CheckUrl Not Exists!)';
