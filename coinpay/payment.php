@@ -48,10 +48,13 @@ $otpCode  = $pay_otp;
 // curl로 호출하여결과 값 확인 
 	if (isset($_SESSION['receive_check_url'])){
 		$endpoint =$_SESSION['receive_check_url'];
-		//$msg = '결제처리에 성공패하였습니다.(디버깅용 )';
-		//return ajaxFail($msg);
+		$msg = '결제처리에 성공패하였습니다.(디버깅용 )';
+		return ajaxFail($msg);
 
-	} 
+	}  else {
+		$msg = '결제처리에 실패하였습니다.(CheckUrl Not Exists!)';
+		return ajaxFail($msg);
+	}
 
 
 	/*
@@ -86,7 +89,7 @@ $otpCode  = $pay_otp;
 			return ajaxFail($msg);
 		}*/
 
-	/*} else{
+	/*} else {
 		$msg = '결제처리에 실패하였습니다.(CheckUrl Not Exists!)';
 		return ajaxFail($msg);
 	}*/
