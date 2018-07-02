@@ -42,18 +42,61 @@ $otpCode  = $pay_otp;
 // ---------------------------------------------------------
 
 
+//결제금액이이상없는지  receive_check_url 로 확인
+//2018.7.1 최인석
+// $_SESSION['receive_check_url'] invoice 에서 세션으로 url 저장 
+// curl로 호출하여결과 값 확인 
 
+	/*
+	
+	if isset($_SESSION['receive_check_url']){
+
+		$post_data["order_id"] = "0000";
+		$post_data["price"] = "12000";
+
+
+        $endpoint =$_SESSION['receive_check_url'];
+
+    	$resultchk_curl = curl_init();
+		curl_setopt($resultchk_curl, CURLOPT_URL, $endpoint);						
+		curl_setopt($resultchk_curl, CURLOPT_RETURNTRANSFER,true);
+		if (strpos($endpoint,"https") !== false ){
+			curl_setopt($curl, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_1);
+			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+		}
+		curl_setopt($resultchk_curl, CURLOPT_POST, true); 
+		curl_setopt($resultchk_curl, CURLOPT_POSTFIELDS, $post_data);
+		$response = curl_exec($resultchk_curl);
+		curl_close($resultchk_curl);
+		var_dump($response);
+
+		$arrayRes = (array) json_decode($response);
+	
+		if ($arrayRes["resstatus"] !== "0000") {
+			
+			$msg = '결제금액에 대한 정보가 변경되어 결제처리할수 없습니다. 다시 금액 확인후 주문해주세요';
+			return ajaxFail($msg);
+		}
+	}else{
+		$msg = '결제처리에 실패하였습니다.(CheckUrl Not Exists!)';
+		return ajaxFail($msg);
+	}
+	*/
+
+
+//----------결제금액이상여부 체크 끝 ------------
 $withdraw_data = $svcCoinPay->execPaymentWithdraw($token, $currency, $amount, $reqId, $address, $otpCode);
 
 if (!$withdraw_data) {		
-	$msg = '출금요청에 실패하였습니다.';
+	$msg = '거래소 출금요청에 실패하였습니다.';
 	return ajaxFail($msg);
 }
 
 if ($withdraw_data['status'] !='0000'){
 	$res_code = $withdraw_data['status'];
 	$res_msg = $withdraw_data['msg'];
-	$msg = '출금요청에 실패하였습니다.'. PHP_EOL. $res_code .' - '. $res_msg;
+	$msg = '거래소 출금요청에 실패하였습니다.'. PHP_EOL. $res_code .' - '. $res_msg;
 	
 	/*switch ($res_code) {
 		case '4041' : $msg = 'OTP 코드가 유효하지 않습니다.'; break;

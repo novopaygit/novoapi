@@ -36,7 +36,8 @@ if ($receive_check_url == '') return errorINV('결과체크전송 URL이 필요�
 
 $receive_url = $receive_url_base;
 $receive_check_url = $receive_check_url_base;
-
+//payment.php 에서 사용하기위헤 세션에 url 저장
+$_SESSION['receive_check_url'] = $receive_check_url;
 
 
 
