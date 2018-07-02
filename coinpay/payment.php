@@ -47,7 +47,7 @@ $otpCode  = $pay_otp;
 // $_SESSION['receive_check_url'] invoice 에서 세션으로 url 저장 
 // curl로 호출하여결과 값 확인 
 
-	/*
+	
 	
 	if isset($_SESSION['receive_check_url']){
 
@@ -82,7 +82,7 @@ $otpCode  = $pay_otp;
 		$msg = '결제처리에 실패하였습니다.(CheckUrl Not Exists!)';
 		return ajaxFail($msg);
 	}
-	*/
+	
 
 
 //----------결제금액이상여부 체크 끝 ------------
