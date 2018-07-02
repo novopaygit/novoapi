@@ -46,7 +46,8 @@ $otpCode  = $pay_otp;
 //2018.7.1 최인석
 // $_SESSION['receive_check_url'] invoice 에서 세션으로 url 저장 
 // curl로 호출하여결과 값 확인 
-
+	$endpoint =$_SESSION['receive_check_url'];
+	
 	/*
 	
 	if isset($_SESSION['receive_check_url']){
