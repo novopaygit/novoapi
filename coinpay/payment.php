@@ -46,8 +46,17 @@ $otpCode  = $pay_otp;
 //2018.7.1 최인석
 // $_SESSION['receive_check_url'] invoice 에서 세션으로 url 저장 
 // curl로 호출하여결과 값 확인 
-	$endpoint =$_SESSION['receive_check_url'];
-	
+	if isset($_SESSION['receive_check_url']){
+		//$endpoint =$_SESSION['receive_check_url'];
+		$msg = '결제처리에 성공패하였습니다.(디버깅용 )';
+		return ajaxFail($msg);
+
+	}else{
+		$msg = '결제처리에 실패하였습니다.(CheckUrl Not Exists!)';
+		return ajaxFail($msg);
+	}
+
+
 	/*
 	
 	if isset($_SESSION['receive_check_url']){
