@@ -51,10 +51,7 @@ $otpCode  = $pay_otp;
 		$msg = '결제처리에 성공패하였습니다.(디버깅용 )';
 		return ajaxFail($msg);
 
-	}else{
-		$msg = '결제처리에 실패하였습니다.(CheckUrl Not Exists!)';
-		return ajaxFail($msg);
-	}
+	} 
 
 
 	/*
