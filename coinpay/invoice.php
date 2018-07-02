@@ -40,6 +40,8 @@ $receive_check_url = $receive_check_url_base;
 $_SESSION['receive_check_url'] = $receive_check_url;
 
 
+return errorINV($_SESSION['receive_check_url'].': 결과체크전송 URL이 필요합니다.');
+
 
 // ===================================================================== 토큰 정보 확인
 
