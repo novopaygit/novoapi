@@ -82,7 +82,7 @@ $otpCode  = $pay_otp;
 		}*/
 
 	} else {
-		$msg = '결제처리에 실패하였습니다.(CheckUrl Not Exists!)';
+		$msg = '결제처리에 실패하였습니다.(결제확인용 URL정보가 존재하지않습니다!)';
 		return ajaxFail($msg);
 	}
 	
