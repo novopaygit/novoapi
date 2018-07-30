@@ -308,7 +308,7 @@ function errorINV($msg, $add='') {
 		<div class="modal-content">
 			<div class="top-header">
 				<div class="header">
-					<div class="header-icon"><span class="font-eng" id ="btn_auto_login" >NovoPay</span> 상품결제</div>
+					<div class="header-icon"><span class="font-eng" id ="btn_auto_login" >NCOPAY</span> 상품결제</div>
 					<div class="close-icon"><img src="/images/close-icon.svg"></div>
 				</div>				
 			</div>			
@@ -330,7 +330,7 @@ function errorINV($msg, $add='') {
 							</form>
 							<div class="before-bottom">
 							    <div class="before-timer floL"><!--<div class="timer-clock"></div>--></div>
-								<div class="floR"><p class="font-eng">Powered by NOVOPAY&nbsp;</p></div>
+								<div class="floR"><p class="font-eng">Powered by NCOS&nbsp;</p></div>
 							</div>
 						</div>
 
@@ -391,7 +391,7 @@ function errorINV($msg, $add='') {
 
 								<div class="after-bottom">
 							    <div class="after-timer floL"><div class="timer-clock">09:55</div></div>
-								<div class="floR"><p class="font-eng">Powered by NOVOPAY&nbsp;</p></div>
+								<div class="floR"><p class="font-eng">Powered by NCOS&nbsp;</p></div>
 							</div>
 							</form>
 						</div>
